@@ -20,4 +20,5 @@ Pour visualiser le projet localement :
 Vous pouvez visiter le site en direct ici : [Lien vers le site](https://mahamatkher.github.io/yaourna-website/)
 
 ---
+**Developed By Mr.Mahamat Kher**  
 *© 2026 Yaour'na. Tous droits réservés.*
