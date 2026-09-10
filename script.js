@@ -48,26 +48,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (menuToggle) {
         menuToggle.addEventListener('click', () => {
-            if (navLinks.style.display === 'flex') {
-                navLinks.style.opacity = '0';
-                setTimeout(() => navLinks.style.display = 'none', 300);
+            navLinks.classList.toggle('mobile-active');
+            
+            // Toggle hamburger to close icon
+            const icon = menuToggle.querySelector('i');
+            if (navLinks.classList.contains('mobile-active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
             } else {
-                navLinks.style.display = 'flex';
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '100%';
-                navLinks.style.left = '0';
-                navLinks.style.width = '100%';
-                navLinks.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
-                navLinks.style.backdropFilter = 'blur(10px)';
-                navLinks.style.padding = '2rem 0';
-                navLinks.style.boxShadow = '0 15px 30px rgba(0,0,0,0.1)';
-                navLinks.style.textAlign = 'center';
-                
-                // Smooth fade in
-                navLinks.style.opacity = '0';
-                navLinks.style.transition = 'opacity 0.3s ease';
-                setTimeout(() => navLinks.style.opacity = '1', 10);
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
             }
         });
     }
@@ -75,15 +65,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Window resize listener to reset nav style on desktop
     window.addEventListener('resize', () => {
         if (window.innerWidth > 768) {
-            navLinks.style.display = 'flex';
-            navLinks.style.flexDirection = 'row';
-            navLinks.style.position = 'static';
-            navLinks.style.padding = '0';
-            navLinks.style.boxShadow = 'none';
-            navLinks.style.opacity = '1';
-            navLinks.style.backgroundColor = 'transparent';
-        } else {
-            navLinks.style.display = 'none';
+            navLinks.classList.remove('mobile-active');
+            const icon = menuToggle?.querySelector('i');
+            if (icon) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
         }
     });
 });

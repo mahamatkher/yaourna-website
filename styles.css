@@ -1025,12 +1025,55 @@ p {
 }
 
 @media (max-width: 768px) {
-    .nav-links, .nav-actions .btn, .nav-actions i:not(.fa-bars) {
+    .nav-actions .btn {
+        display: none;
+    }
+    
+    /* Hide search and user icons on mobile, keep cart */
+    .nav-actions button[aria-label="Recherche"],
+    .nav-actions button[aria-label="Profil"] {
         display: none;
     }
     
     .mobile-menu-toggle {
         display: block;
+        color: var(--primary-dark);
+        z-index: 1001;
+    }
+    
+    /* Beautiful Mobile Dropdown Menu */
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(15px);
+        flex-direction: column;
+        padding: 0;
+        gap: 0;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+        border-top: 1px solid rgba(0,0,0,0.05);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .nav-links.mobile-active {
+        max-height: 400px; /* Big enough for the links */
+        padding: 1rem 0;
+    }
+    
+    .nav-links a {
+        width: 100%;
+        padding: 1rem 2rem;
+        text-align: center;
+        font-size: 1.1rem;
+        border-bottom: 1px solid rgba(0,0,0,0.03);
+    }
+    
+    .nav-links a:last-child {
+        border-bottom: none;
     }
     
     .hero {
