@@ -887,6 +887,12 @@ p {
         display: block;
     }
     
+    .hero {
+        background-position: 85% center;
+        padding-top: 4rem;
+        padding-bottom: 12rem; /* Give height so the yogurt shows at the bottom */
+    }
+    
     .hero-content {
         flex-direction: column;
         text-align: center;
@@ -895,6 +901,11 @@ p {
     .hero-text {
         padding-right: 0;
         margin-bottom: 2rem;
+        background: rgba(255, 255, 255, 0.6);
+        padding: 1.5rem;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.8);
     }
     
     .features-bar {
