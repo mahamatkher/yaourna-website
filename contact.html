@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Yaour'na</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar reveal-nav">
+        <div class="container navbar-container">
+            <div class="logo">
+                <img src="images/logo_yaourt_na_transparent.png" alt="Yaour'na Logo" class="brand-logo">
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="produits.html">Nos Produits</a>
+                <a href="apropos.html">À propos</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button aria-label="Recherche" style="background:none;border:none;"><i class="fa-solid fa-search"></i></button>
+                <button aria-label="Profil" style="background:none;border:none;"><i class="fa-regular fa-user"></i></button>
+                <button aria-label="Panier" style="background:none;border:none;"><i class="fa-solid fa-cart-shopping"></i></button>
+                <a href="#" class="btn btn-primary btn-round">Commander</a>
+                <button aria-label="Menu mobile" class="mobile-menu-toggle" style="background:none;border:none;"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header reveal-hero">
+            <div class="container text-center">
+                <span class="cursive-title">restons en contact</span>
+                <h1>Contactez-nous</h1>
+                <p>Une question, une suggestion ou une envie de partenariat ? L'équipe Yaour'na est à votre écoute.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section container" style="padding: 4rem 20px 6rem 20px;">
+            <div class="product-detail-wrapper reveal delay-100" style="align-items: stretch;">
+                
+                <!-- Info Column -->
+                <div class="contact-info" style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
+                    <span class="cursive-title">nos coordonnées</span>
+                    <h2>Venez nous voir</h2>
+                    <p style="margin-bottom: 2rem;">Que ce soit pour une commande spéciale, devenir distributeur ou simplement nous dire bonjour, notre porte est toujours ouverte !</p>
+                    
+                    <div class="contact-detail-item">
+                        <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <strong>Adresse</strong><br>
+                            Siège Social Yaour'na, N'Djamena, Tchad
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail-item">
+                        <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <strong>Téléphone</strong><br>
+                            +235 66 51 08 43
+                        </div>
+                    </div>
+
+                    <div class="contact-detail-item">
+                        <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <strong>Email</strong><br>
+                            bonjour@yaourna.com
+                        </div>
+                    </div>
+
+                    <div class="contact-detail-item">
+                        <div class="contact-icon"><i class="fa-regular fa-clock"></i></div>
+                        <div>
+                            <strong>Horaires d'ouverture</strong><br>
+                            Lun - Sam : 08h00 - 18h00
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="contact-form-container" style="flex: 1.2; background: var(--bg-light); padding: 2.5rem; border-radius: 20px; border: 1px solid var(--border-color);">
+                    <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem;">Envoyez-nous un message</h3>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Votre Nom</label>
+                            <input type="text" id="name" placeholder="Ex: Ali Mahamat" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Votre Email</label>
+                            <input type="email" id="email" placeholder="Ex: ali@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <select id="subject" required>
+                                <option value="">Choisissez un sujet...</option>
+                                <option value="commande">Faire une commande</option>
+                                <option value="partenariat">Devenir distributeur</option>
+                                <option value="question">Question générale</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="5" placeholder="Comment pouvons-nous vous aider ?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 10px; padding: 1rem;">Envoyer le message <i class="fa-solid fa-paper-plane" style="margin-left: 8px;"></i></button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container footer-top">
+            <div class="footer-logo">
+                <img src="images/logo_yaourt_na_transparent.png" alt="Yaour'na Logo" style="width: 150px; filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2));">
+            </div>
+            <div class="footer-newsletter">
+                <h4>Restez connecté</h4>
+                <p>Recevez nos offres et nouveautés</p>
+                <form class="newsletter-form">
+                    <label for="newsletter-email" style="display:none;">Votre adresse e-mail</label>
+                    <input type="email" id="newsletter-email" placeholder="Votre adresse e-mail" aria-label="Votre adresse e-mail" required>
+                    <button type="submit" class="btn btn-primary">S'inscrire</button>
+                </form>
+            </div>
+            <div class="footer-social">
+                <div class="social-icons">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-tiktok"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+                <div class="service-client">
+                    <i class="fa-solid fa-location-dot"></i> Service client: +235 66 51 08 43
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 Yaour'na. Tous droits réservés.<br><span style="font-size: 0.8rem; color: var(--primary-green); font-weight: 600; margin-top: 5px; display: inline-block;">Developed By Mr.Mahamat Kher</span></p>
+                <div class="footer-links">
+                    <a href="#">Mentions Légales</a>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-country">
+                    <img src="images/icon_flag.png" alt="Tchad" style="width: 20px;"> Fabriqué au Tchad
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
