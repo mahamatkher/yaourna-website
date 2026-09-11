@@ -73,4 +73,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    // --- Dynamic WhatsApp Ordering ---
+    const waButtons = document.querySelectorAll('.wa-order-btn');
+    waButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const form = this.closest('.order-form');
+            const productName = form.dataset.product;
+            const size = form.querySelector('.size-select').value;
+            const qty = form.querySelector('.qty-input').value;
+            
+            const message = "Bonjour Yaour'na ! Je souhaite commander " + qty + "x " + productName + " - " + size + ".";
+            const waUrl = "https://wa.me/23565227059?text=" + encodeURIComponent(message);
+            
+            window.open(waUrl, '_blank');
+        });
+    });
 });
